@@ -1,0 +1,19 @@
+<mcu_list>
+<mcu>
+<id>1edfa2</id>
+<name>PIC 18F2550</name>
+<family>Microchip 18F</family>
+<flash_memory_size>32768</flash_memory_size>
+<data_memory_size>256</data_memory_size>
+<ram_size>2048</ram_size>
+<operating_voltage_range>2.0~5.5 V</operating_voltage_range>
+<pgm_voltage_range>9.0-13.25V</pgm_voltage_range>
+<pgm_pin_map>1:VPP;8:VSS;19:VSS;20:VDD;28:PGD;27:PGC;26:PGM;</pgm_pin_map>
+<speed_grade>0-48 MHz</speed_grade>
+<pgm_page_size>32</pgm_page_size>
+<erase_word_1>3F3F</erase_word_1>
+<erase_word_2>8F8F</erase_word_2>
+<package_type>1</package_type>
+<pin_count>28</pin_count>
+</mcu>
+</mcu_list>

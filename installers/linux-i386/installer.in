@@ -1,0 +1,14 @@
+#!/bin/bash
+if [ "$(id -u)" != "0" ]; then
+   echo "This Installer must be run as root" 1>&2
+   exit 1
+fi
+mkdir -p /opt/UBurner
+mv ./bin /opt/UBurner
+mv ./lib32 /opt/UBurner
+mv ./resources /opt/UBurner
+mv ./mcus /opt/UBurner
+mv ./docs /opt/UBurner
+mv ./plugins /opt/UBurner
+echo ""
+echo "Installation Completed !!!"

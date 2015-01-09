@@ -1,0 +1,86 @@
+OP: programma di controllo per open programmer, 
+programmatore USB per microcontrollori PIC, ATMEL, memorie I2C/SPI/MicroWire, dispositivi I2C e SPI.
+Sito web: http://openprog.altervista.org
+Questi sorgenti sono distribuiti gratuitamente sotto licenza GNU General Public License versione 2 
+
+Cambiamenti (per usare i dispositivi aggiunti è richiesto un programmatore con firmware corrispondente):
+
+V 0.8.0 giugno 2012:	supporto bus one-wire e memorie DS2430,DS2431,DS2433,DS28EC20, termometro DS1820;
+						supporto bus UNIO e memorie 11010-20-40-80-160;
+						corretti algoritmi 24x1024/5 e 251024, 
+						aggiunte FLASH SPI 251005,252005,254005,258005,251605,25X10,25X20,25X40,25X80,
+						25X16,25X32,25X64;
+						aggiunti 16F1782-3-4-6-7,12C508-9
+
+V 0.7.10 gennaio 2012:	aggiunti 12F617,12F1501,16F1503-7-8-9,16F720-21,16F72,16F707,
+						18F13K22,18F14K22,18F23K22,18F43K22,18F24K22,18F44K22,18F25K22,
+						18F45K22,18F26K22,18F46K22,18F8520,18F66J60,18F66J65,18F67J60,
+						18F86J60,18F86J65,18F87J60,18F96J60,18F96J65,18F97J60,
+						corretta lettura/scrittura file binari, varie correzioni
+
+V 0.7.9	giugno 2011:	aggiunti ATtiny11-12-24-26-261-44-48-461-4313-84-88-861, 
+						ATmega48-88-164A-168-324A-328-644A-1284, 16LF1902-3-4-6-7,
+						scrittura EEPROM seriali ottimizzata, 
+						varie modifiche minori e correzioni
+
+V 0.7.8	aprile 2011:	aggiornati algoritmi 16F87xA e 16F62xA,
+						16F1822 diventa 12F1822, aggiunti 30F1010, 30F2020, 30F2023, 16F1847, 12F1840
+						16F1516, 16F1517, 16F1518, 16F1519, 16F1526, 16F1527
+						maggiore modularità del codice, corretti alcuni bachi;						
+						auto-ricerca programmatore su hiddevX
+
+V 0.7.7	agosto 2010:	aggiunti 16F72x,
+						migliorata compatibilità con hex non standard
+
+V 0.7.6	luglio 2010:	modifica algoritmi 93xxx con lettura byte a byte per maggiore compatibilità,
+						supporto programmatore con ADC a 12 bit (18F2553 ecc.)
+
+V 0.7.5	giugno 2010:	corretto baco in scrittura config 18Fx (introdotto nella v.0.7.4),
+						aggiunta scrittura goto ICD per i 16Fx, 
+						correzioni varie
+
+V 0.7.4	maggio 2010:	aggiunti PIC24H, dsPIC30, dsPIC33, 18FxxKxx, 18FxxJxx,
+						eliminati parecchi costrutti MFC,
+						correzioni: verifica config word, algoritmo 24F e 18F, vari
+
+V 0.7.3	aprile 2010:	compilabile anche su windows, 
+						corretto baco nel caricamento di un file per EEPROM, 
+						aggiunti 16F1xxx, un po' di pulizia del codice
+
+V 0.7.2	marzo 2010:		aggiunte alcune memorie uW, corretti algoritmi 16F7xx e alcuni bachi
+
+V 0.7.1	febbraio 2010:	aggiunti alcuni micro PIC18 e Atmel
+
+V 0.7.0	gennaio 2010:	aggiunte memorie SPI e alcuni micro PIC24F
+
+V 0.6.2	ottobre 2009:	corretto algoritmo 16F628, 16F87/88 e 81X; supporto file binari con memorie EE
+
+V 0.6.1	settembre 2009:	corretti vari bachi, aggiunte memorie 93Cx6 e alcuni micro Atmel
+
+V 0.6.0	giugno 2009:	aggiunte memorie MicroWire 93Sx6
+
+V 0.5.3	marzo 2009: 	corretto baco sulle config word dei PIC18
+
+V 0.5.2	marzo 2009: 	aggiunti alcuni micro PIC e Atmel, corretti alcuni bachi
+
+V 0.5.1	gennaio  2009: 	aggiunti alcuni micro PIC, corretti alcuni bachi
+
+V 0.5.0	novembre 2008: 	aggiunti alcuni micro ATMEL (90S8515, 90S1200), supporto universale I2C/SPI
+
+V 0.4.0	agosto 2008: 	aggiunte memorie I2C 24XX.
+
+V 0.3.0	luglio 2008:	prima versione pubblica, supporta PIC 10,12,16,18.
+
+Guida: op -h
+Elenco completo di dispositivi supportati: op -support
+Esempio di scrittura: op -d 12F628 -ee -w prova.hex
+Per compilare: make
+Per installare: make install
+
+Può essere compilato per windows con MinGW/MSYS
+
+hid_test: spedisce e riceve un singolo pacchetto dati (64 byte)
+es. hid_test 0 1 2 3 12 15 1a 1c 1f 4
+
+ihex: calcola il checksum di una serie di byte secondo l'algoritmo usato nel formato intel hex
+es. ihex 1 2 3 4

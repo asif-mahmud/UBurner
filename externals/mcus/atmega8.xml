@@ -1,0 +1,17 @@
+<mcu_list>
+<mcu>
+<id>1edfa2</id>
+<name>ATmega8</name>
+<family>Atmel</family>
+<flash_memory_size>8192</flash_memory_size>
+<data_memory_size>512</data_memory_size>
+<ram_size>512</ram_size>
+<operating_voltage_range>2.8~5.5 V</operating_voltage_range>
+<pgm_voltage_range>4.5-5.5V</pgm_voltage_range>
+<pgm_pin_map>1:RESET;7:VCC;8:GND;19:SCK;18:MISO;17:MOSI;</pgm_pin_map>
+<speed_grade>0-16 MHz</speed_grade>
+<pgm_page_size>32</pgm_page_size>
+<package_type>1</package_type>
+<pin_count>28</pin_count>
+</mcu>
+</mcu_list>

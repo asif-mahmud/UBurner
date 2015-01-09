@@ -1,0 +1,4 @@
+#include <windows.h>
+
+101 ICON                       "${CMAKE_BINARY_DIR}/resources/cmd.ico"
+

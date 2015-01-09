@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+	<assemblyIdentity
+		type = "win32"
+		name="UBurner.GUI.${UBurner_VERSION_MAJOR}.${UBurner_VERSION_MINOR}.0.${UBurner_VERSION_REV}"
+		version="${UBurner_VERSION_MAJOR}.${UBurner_VERSION_MINOR}.0.${UBurner_VERSION_REV}"
+		processorArchitecture="x86"
+	/>
+	<trustInfo xmlns="urn:schemas-microsoft-com:asm.v2">
+		<security>
+			<requestedPrivileges>
+				<requestedExecutionLevel level="requireAdministrator" uiAccess="false"/>
+			</requestedPrivileges>
+		</security>
+	</trustInfo>
+</assembly>

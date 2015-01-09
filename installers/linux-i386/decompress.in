@@ -1,0 +1,34 @@
+#!/bin/bash
+if [ "$(id -u)" != "0" ]; then
+   echo "This Installer must be run as root" 1>&2
+   exit 1
+fi
+echo ""
+echo "${PROJECT_NAME} v${UBurner_PACKAGE_VERSION}"
+echo "==========================================="
+echo ""
+echo "Author  : Asif Mahmud Shimon"
+echo "License : LGPLv3"
+echo "URL 	  : ${UBurner_PACKAGE_URL}"
+echo "Contact : ${UBurner_PACKAGE_CONTACT}"
+echo ""
+echo "The Terms of LGPLv3 will be considered accpeted by this installer."
+echo "Running ${PROJECT_NAME}-v${UBurner_PACKAGE_VERSION} Installer..."
+sleep 5
+
+export TMPDIR=`mktemp -d /tmp/UBurner.XXXXXX`
+
+ARCHIVE=`awk '/^__ARCHIVE_BELOW__/ {print NR + 1; exit 0; }' $0`
+
+tail -n+$ARCHIVE $0 | tar xzv -C $TMPDIR
+
+CDIR=`pwd`
+cd $TMPDIR
+./installer.sh
+
+cd $CDIR
+rm -rf $TMPDIR
+
+exit 0
+
+__ARCHIVE_BELOW__

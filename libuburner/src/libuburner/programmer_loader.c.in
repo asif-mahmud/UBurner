@@ -1,0 +1,21 @@
+/**
+* Cmake Generated Source file
+* DO NOT EDIT
+*/
+#include <programmer_loader.h>
+#include <stdlib.h>
+
+${PGM_INCLUDES}
+
+#define MALLOC_FOR_PGM(X) X=(programmer_list_t *)malloc(sizeof(programmer_list_t));\
+                            X->next = NULL;\
+                            X->pgm = (programmer_t *)calloc(1,sizeof(programmer_t))
+
+
+programmer_list_t * load_programmers(int * count)
+{
+    *count  = ${UB_PROGRAMMERS_CNT};
+    programmer_list_t * ret = NULL;
+    ${PGM_LOAD_CODE}
+    return ret;
+}

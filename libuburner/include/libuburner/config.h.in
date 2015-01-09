@@ -1,0 +1,24 @@
+/**
+* CMake Generated configuration file
+*/
+#ifndef OP_CONFIG_H
+#define OP_CONFIG_H
+
+#define OpProg_VERSION_MAJOR	"${UBurner_VERSION_MAJOR}"
+#define OpProg_VERSION_MINOR	"${UBurner_VERSION_MINOR}"
+#define OpProg_VERSION_REV	"${UBurner_VERSION_REV}"
+#define OpProg_VERSION		"${UBurner_PACKAGE_VERSION}"
+#define OpProg_URL		"${UBurner_PACKAGE_URL}"
+#define OpProg_AUTHORS		"${UBurner_AUTHORS}"
+
+#define DEFAULT_MCUS_DIR	"${CONF_MCUS_DIR}"
+#define DEFAULT_PLUGINS_DIR	"${CONF_PLUGINS_DIR}"
+#define DEFAULT_DOCS_DIR	"${CONF_DOCS_DIR}"
+
+#define PLUGIN_SUFFIX		"${CONF_PLUGIN_SUFFIX}"
+#define OpProg_PGM_CNT      ${UB_PROGRAMMERS_CNT}
+char OpProg_PGM_NAME_LIST[ OpProg_PGM_CNT ][32] = {
+    ${CONF_PGM_LIST}
+};
+
+#endif//OP_CONFIG_H

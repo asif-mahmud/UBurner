@@ -1,0 +1,3 @@
+ADD_SUBDIRECTORY( resources )
+ADD_SUBDIRECTORY( plugins )
+ADD_SUBDIRECTORY( mcus )
